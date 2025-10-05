@@ -1,6 +1,6 @@
 // Estrutura inicial
 console.log('TenisBlog - App carregado');
-// app.js - Estrutura JSON dos dados
+// Estrutura JSON dos dados
 const dados = [
   {
     id: 1,
@@ -57,3 +57,39 @@ const dados = [
 ];
 
 console.log('Dados JSON carregados:', dados);
+
+// Função para carregar os modelos na página inicial
+function carregarModelos() {
+  const container = document.querySelector('.dividir_modelos');
+
+  if (!container) {
+    console.log('Container de modelos não encontrado');
+    return;
+  }
+
+  console.log('Carregando modelos...');
+  container.innerHTML = '';
+
+  dados.forEach((item) => {
+    const card = `
+      <a href="detalhes.html?id=${item.id}" class="card-link">
+        <div class="modelo">
+          <img src="${item.imagem}" alt="${item.titulo}" />
+          <h3>${item.titulo}</h3>
+          <p>Valor: ${item.valor}</p>
+        </div>
+      </a>
+    `;
+    container.innerHTML += card;
+  });
+
+  console.log('Modelos carregados com sucesso');
+}
+
+// Inicialização básica
+document.addEventListener('DOMContentLoaded', function () {
+  console.log('Página carregada');
+  if (document.querySelector('.dividir_modelos')) {
+    carregarModelos();
+  }
+});
