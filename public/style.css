@@ -211,6 +211,51 @@ article {
   text-align: justify;
 }
 
+.blog-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.blog-card img {
+  max-width: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.blog-card img:hover {
+  transform: scale(1.05);
+}
+
+.blog-content {
+  max-width: 600px;
+  text-align: justify;
+}
+
+.btn-ler-artigo {
+  display: inline-block;
+  background: #2c5aa0;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-ler-artigo:hover {
+  background: #1e3d6f;
+}
+
 /* ================= SEÇÃO MODELOS ================= */
 .dividir_modelos {
   display: grid;
@@ -412,5 +457,87 @@ footer {
 
   .detalhes-info h1 {
     font-size: 1.6rem;
+  }
+}
+
+/* ================= BOTÕES DE AÇÃO ================= */
+.acoes {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.btn-comprar {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(45deg, #ff6b35, #ffcc00);
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.btn-comprar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+  background: linear-gradient(45deg, #e55a2b, #e6b800);
+}
+
+.btn-voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(45deg, #4a5568, #718096);
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(74, 85, 104, 0.3);
+}
+
+.btn-voltar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(74, 85, 104, 0.4);
+  background: linear-gradient(45deg, #2d3748, #4a5568);
+}
+
+/* Responsividade para botões */
+@media (max-width: 768px) {
+  .acoes {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .btn-comprar,
+  .btn-voltar {
+    flex: 1;
+    text-align: center;
+    min-width: 150px;
+    padding: 12px 25px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .acoes {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-comprar,
+  .btn-voltar {
+    width: 100%;
+    min-width: auto;
   }
 }

@@ -14,19 +14,22 @@ const dados = [
     data: '2025-03-30',
     imagem: 'imgs/tenisNike.png',
     imagemDetalhe: 'imgs/tenisNike.png',
+    linkCompra:
+      'https://www.nike.com.br/tenis-nike-air-force-1-07-masculino-011137.html',
   },
   {
     id: 2,
     titulo: 'Adidas Superstar',
     descricao: 'O lendário tênis com bico de casca de camarão',
     conteudo:
-      'Um dos tênis mais famosos do mundo, o tênis adidas Superstar construiu seu rico legado nos pés de atletas, skatistas e pioneiros do estilo. Esses tênis escrevem o próximo capítulo da história com uma silhueta nova que é extra ousada e tem tudo a ver com conforto. Embora a biqueira em concha característica e as Três Listras serrilhadas estejam presentes desde o início, a silhueta atualizada oferece uma atitude nova, inspirada nos anos 90.',
+      'O Adidas Superstar revolucionou o basquete nos anos 70 e se tornou um ícone da cultura urbana. Com seu distintivo bico de casca de camarão e三条 listras, este tênis combina heritage esportivo com estilo contemporâneo.',
     categoria: 'Casual',
     marca: 'Adidas',
     valor: 'R$ 499,99',
     data: '2025-03-28',
     imagem: 'imgs/tenisAdidas.png',
     imagemDetalhe: 'imgs/tenisAdidas.png',
+    linkCompra: 'https://www.adidas.com.br/tenis-superstar/EG4958.html',
   },
   {
     id: 3,
@@ -40,6 +43,8 @@ const dados = [
     data: '2025-03-27',
     imagem: 'imgs/tenisNW.png',
     imagemDetalhe: 'imgs/tenisNW.png',
+    linkCompra:
+      'https://www.newbalance.com.br/tenis-new-balance-550-masculino-1174678/p',
   },
   {
     id: 4,
@@ -53,6 +58,7 @@ const dados = [
     data: '2025-03-26',
     imagem: 'imgs/tenisPuma.png',
     imagemDetalhe: 'imgs/tenisPuma.png',
+    linkCompra: 'https://br.puma.com/tenis-suede-xl-395205-02.html',
   },
 ];
 
@@ -134,7 +140,12 @@ function carregarDetalhes() {
         <div class="categoria">
           <strong>Categoria:</strong> ${produto.categoria}
         </div>
-        <a href="index.html" class="btn-voltar">← Voltar para a Loja</a>
+        <div class="acoes">
+          <a href="${produto.linkCompra}" target="_blank" class="btn-comprar">
+            🛒 Comprar Agora
+          </a>
+          <a href="index.html" class="btn-voltar">← Voltar para a Loja</a>
+        </div>
       </div>
     </div>
   `;
