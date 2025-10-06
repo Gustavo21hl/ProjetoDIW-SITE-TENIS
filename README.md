@@ -34,14 +34,18 @@ Leia o enunciado completo no Canvas.
 const dados = [
   {
     id: 1,
-    titulo: 'Prefeitura Lança Plano de Mobilidade Urbana',
-    descricao: 'Novo plano do transporte público.',
+    titulo: "Nike Air Force 1 '07",
+    descricao: 'O clássico atemporal que nunca sai de moda',
     conteudo:
-      'A Prefeitura apresentou nesta segunda-feira um novo plano de mobilidade urbana.',
-    categoria: 'Cidades',
-    autor: 'Joana Ribeiro',
+      "O Nike Air Force 1 '07 é um ícone da cultura sneaker. Com seu design limpo e solado de borracha durável, este tênis oferece conforto e estilo para qualquer ocasião. A tecnologia Air na entressola proporciona amortecimento suave o dia todo.",
+    categoria: 'Casual',
+    marca: 'Nike',
+    valor: 'R$ 759,99',
     data: '2025-03-30',
-    imagem: 'img/mobilidade.jpg',
+    imagem: 'imgs/tenisNike.png',
+    imagemDetalhe: 'imgs/tenisNike.png',
+    linkCompra:
+      'https://www.nike.com.br/tenis-nike-air-force-1-07-masculino-011137.html',
   },
 ];
 ```
